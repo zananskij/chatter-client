@@ -170,7 +170,7 @@ export default function Chat() {
           </button>
         </div>
       </div>
-      <div className="flex flex-col bg-blue-50 w-2/3 p-2">
+      <div className="flex flex-col bg-cyan-900 w-2/3 p-2">
         <div className="flex-grow">
           {!selectedUserId && (
             <div className="flex h-full flex-grow items-center justify-center">
