@@ -127,7 +127,7 @@ export default function Chat() {
 
   return (
     <div className="flex h-screen">
-      <div className="bg-white w-1/3 flex flex-col">
+      <div className="bg-cyan-900 w-1/3 flex flex-col">
         <div className="flex-grow">
           <Logo />
           {Object.keys(onlinePeopleExclOurUser).map((userId) => (
@@ -170,7 +170,7 @@ export default function Chat() {
           </button>
         </div>
       </div>
-      <div className="flex flex-col bg-cyan-900 w-2/3 p-2">
+      <div className="flex flex-col bg-gray-900 w-2/3 p-2">
         <div className="flex-grow">
           {!selectedUserId && (
             <div className="flex h-full flex-grow items-center justify-center">
