@@ -30,6 +30,7 @@ export default function Chat() {
       }, 1000)
     })
   }
+
   function showOnlinePeople(peopleArray) {
     const people = {}
     peopleArray.forEach(({ userId, username }) => {
@@ -155,7 +156,7 @@ export default function Chat() {
           ))}
         </div>
         <div className="p-2 text-center flex items-center justify-center">
-          <span className="mr-2 text-sm text-gray-600 flex items-center">
+          <span className="mr-2 text-sm text-gray-100 flex items-center">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-4 h-4">
               <path
                 fillRule="evenodd"
@@ -163,23 +164,29 @@ export default function Chat() {
                 clipRule="evenodd"
               />
             </svg>
-            {username}
+            User: {username}
           </span>
-          <button onClick={logout} className="text-sm bg-blue-100 py-1 px-2 text-gray-500 border rounded-sm">
-            logout
+          <button onClick={logout} className="text-sm bg-red-500 py-1 px-2 text-white rounded-sm">
+            Logout
           </button>
         </div>
       </div>
-      <div className="flex flex-col bg-black w-2/3 p-2">
-        <div className="flex-grow">
+
+      <div className="flex flex-col bg-gray-600 w-2/3 p-0">
+        <div className="sticky top-0 z-10 bg-stone-900 p-3 text-gray-200 text-center">
+          {selectedUserId
+            ? `Chat with ${onlinePeople[selectedUserId] || offlinePeople[selectedUserId]?.username}`
+            : "No chat selected currently"}
+        </div>
+        <div className="flex-grow p-4 ">
           {!selectedUserId && (
             <div className="flex h-full flex-grow items-center justify-center">
-              <div className="text-gray-300">&larr; Select a person from the sidebar</div>
+              <div className="text-gray-200">&larr; Select a person from the sidebar</div>
             </div>
           )}
           {!!selectedUserId && (
             <div className="relative h-full">
-              <div className="overflow-y-scroll absolute top-0 left-0 right-0 bottom-2">
+              <div className="overflow-y-scroll absolute top-0 left-0 right-0 bottom-2 overflow-auto scrollbar-hide">
                 {messagesWithoutDupes.map((message) => (
                   <div key={message._id} className={message.sender === id ? "text-right" : "text-left"}>
                     <div
@@ -221,13 +228,13 @@ export default function Chat() {
           )}
         </div>
         {!!selectedUserId && (
-          <form className="flex gap-2" onSubmit={sendMessage}>
+          <form className="flex gap-2 p-4" onSubmit={sendMessage}>
             <input
               type="text"
               value={newMessageText}
               onChange={(ev) => setNewMessageText(ev.target.value)}
-              placeholder="Type your message here"
-              className="bg-white flex-grow border rounded-sm p-2"
+              placeholder="Send a message..."
+              className="bg-blue-100 flex-grow border rounded-sm p-2"
             />
             <label className="bg-blue-200 p-2 text-gray-600 cursor-pointer rounded-sm border border-blue-200">
               <input type="file" className="hidden" onChange={sendFile} />

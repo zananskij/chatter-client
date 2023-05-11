@@ -1,10 +1,12 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: [
-    "./src/*.jsx"
-  ],
+  content: ["./src/*.jsx"],
   theme: {
-    extend: {},
+    extend: {
+      backgroundImage: (theme) => ({
+        "login-bg": "url('/images/login-bg.jpg')",
+      }),
+    },
   },
-  plugins: [],
+  plugins: [require("tailwind-scrollbar-hide")],
 }
