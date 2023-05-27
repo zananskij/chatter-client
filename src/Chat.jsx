@@ -22,7 +22,8 @@ export default function Chat() {
   // creates the ws at the specified URL
   function connectToWs() {
     // const ws = new WebSocket("ws://localhost:4040")
-    const ws = new WebSocket("wss://new-chat-test.herokuapp.com")
+    // const ws = new WebSocket("wss://new-chat-test.herokuapp.com")
+    const ws = new WebSocket("wss://chatter-messenger-backend.herokuapp.com")
     setWs(ws)
 
     //this eventListener, when a new msg is received from server over the ^ above ws connection, the handleMessage will be called
