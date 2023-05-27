@@ -18,11 +18,16 @@ export default function Chat() {
   useEffect(() => {
     connectToWs()
   }, [selectedUserId])
+
+  // creates the ws at the specified URL
   function connectToWs() {
     // const ws = new WebSocket("ws://localhost:4040")
     const ws = new WebSocket("wss://new-chat-test.herokuapp.com")
     setWs(ws)
+
+    //this eventListener, when a new msg is received from server over the ^ above ws connection, the handleMessage will be called
     ws.addEventListener("message", handleMessage)
+
     ws.addEventListener("close", () => {
       setTimeout(() => {
         console.log("Disconnected. Trying to reconnect.")
@@ -31,6 +36,7 @@ export default function Chat() {
     })
   }
 
+  // processes the people array and will se
   function showOnlinePeople(peopleArray) {
     const people = {}
     peopleArray.forEach(({ userId, username }) => {
@@ -38,6 +44,7 @@ export default function Chat() {
     })
     setOnlinePeople(people)
   }
+
   function handleMessage(ev) {
     const messageData = JSON.parse(ev.data)
     console.log({ ev, messageData })
