@@ -70,46 +70,4 @@ export default function RegisterAndLoginForm() {
       </form>
     </div>
   )
-  // return (
-  //   <div className="bg-login-bg bg-cover bg-center h-screen flex items-center">
-  //     <form className="w-64 mx-auto mb-12" onSubmit={handleSubmit}>
-  //       <h1 className="text-center text-white text-2xl font-bold mb-4">CHAT APP</h1>
-
-  //       <input
-  //         value={username}
-  //         onChange={(ev) => setUsername(ev.target.value)}
-  //         type="text"
-  //         placeholder="username"
-  //         className="block w-full rounded-sm p-2 mb-2  bg-black text-white placeholder-gray-500"
-  //       />
-  //       <input
-  //         value={password}
-  //         onChange={(ev) => setPassword(ev.target.value)}
-  //         type="password"
-  //         placeholder="password"
-  //         className="block w-full rounded-sm p-2 mb-2 bg-black text-white placeholder-gray-500"
-  //       />
-  //       <button className="bg-blue-500 text-white block w-full rounded-sm p-2">
-  //         {isLoginOrRegister === "register" ? "Register" : "Login"}
-  //       </button>
-  //       <div className="text-center mb-4 text-teal-500 bg-gray-900 mt-2 rounded-sm p-1">
-  //         {isLoginOrRegister === "register" ? (
-  //           <div>
-  //             Already a member?
-  //             <button className="ml-1 underline" onClick={() => setIsLoginOrRegister("login")}>
-  //               Login here
-  //             </button>
-  //           </div>
-  //         ) : (
-  //           <div>
-  //             Don't have an account?
-  //             <button className="ml-1 underline" onClick={() => setIsLoginOrRegister("register")}>
-  //               Register
-  //             </button>
-  //           </div>
-  //         )}
-  //       </div>
-  //     </form>
-  //   </div>
-  // )
 }
