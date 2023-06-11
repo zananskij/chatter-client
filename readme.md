@@ -25,7 +25,7 @@ https://chatter-messenger.herokuapp.com/
 - MongoDB
 - WebSocket
 - JSON Web Tokens (JWT)
-- Bcrypt.js
+- Bcrypt.js (Password Hashing)
 - File system operations / sharing
 
 ## Key Features:
