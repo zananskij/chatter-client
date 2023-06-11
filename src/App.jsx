@@ -4,7 +4,6 @@ import Routes from "./Routes"
 
 function App() {
   // axios.defaults.baseURL = "http://localhost:4040"
-  // axios.defaults.baseURL = "https://new-chat-test.herokuapp.com"
   axios.defaults.baseURL = "https://chatter-messenger-backend.herokuapp.com"
 
   axios.defaults.withCredentials = true
