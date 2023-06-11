@@ -174,7 +174,7 @@ export default function Chat() {
             </svg>
             User: {username}
           </span>
-          <button onClick={logout} className="text-sm bg-red-500 py-1 px-2 text-white rounded-sm">
+          <button onClick={logout} className="text-sm bg-red-500 hover:bg-red-800 py-1 px-2 text-white rounded-sm">
             Logout
           </button>
         </div>
