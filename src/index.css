@@ -1,3 +1,55 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Shiny Button Effect */
+.shiny-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  padding: 0 24px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1;
+  position: relative;
+  background: linear-gradient(90deg, rgba(229, 9, 20, 1) 0%, rgba(255, 82, 82, 1) 100%);
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+  overflow: hidden;
+  outline: none;
+  text-decoration: none;
+  margin-right: 12px;
+}
+
+.shiny-button::before {
+  content: "";
+  display: block;
+  position: absolute;
+  background: rgba(255, 255, 255, 0.2);
+  width: 60px;
+  height: 100%;
+  left: -50px;
+  top: 0;
+  transform: skewX(-20deg) translateX(70px);
+  transition: transform 0.3s ease-in-out;
+}
+
+.shiny-button:hover {
+  transform: scale(1.05);
+}
+
+.shiny-button:hover::before {
+  transform: skewX(-20deg) translateX(230px);
+}
+
+.shiny-button-blue {
+  background: linear-gradient(90deg, rgba(13, 110, 253, 1) 0%, rgba(17, 138, 178, 1) 100%);
+}
+
+.shiny-button-green {
+  background: linear-gradient(90deg, rgba(16, 185, 129, 1) 0%, rgba(5, 150, 105, 1) 100%);
+}
