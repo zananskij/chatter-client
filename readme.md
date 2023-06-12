@@ -4,13 +4,13 @@
 
 This repository contains the frontend code for my chatter messenger app. The app provides a real-time messaging experience, allowing users to securely communicate with each other. It implements user authentication and password hashing on the backend to ensure data privacy and security.
 
-The frontend is built using React build a dynamic user interface. Using react's component-based architecture to create reusable UI components and manage application state effectively. Axios is used for making API requests to the backend server, enabling seamless communication between the frontend and backend. The app also incorporates WebSocket communication, enabling real-time messaging between users. It supports file sharing functionality, allowing users to share files between eachother as well. Tailwind CSS is utilized for styling, providing a responsive and easy to understand user experience.
+The frontend is built using React to build a dynamic user interface. Using React's component-based architecture to create reusable UI components and manage application state effectively. Axios is used for making API requests to the backend server, enabling seamless communication between the frontend and backend. The app also incorporates WebSocket communication, enabling real-time messaging between users. It supports file sharing functionality, allowing users to share files between eachother as well. Tailwind CSS is utilized for styling, providing a responsive and easy to understand user experience.
 
-## Deployed Link (Backend / API)
+## Deployed Link
 
 https://chatter-messenger.herokuapp.com/
 
-## Skills Utilized
+## Skills Utilized:s
 
 ### Frontend
 
